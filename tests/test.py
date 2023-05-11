@@ -1,6 +1,6 @@
 from datetime import date
 
-from pages.page_class import RegistrationPage
+from pages.registration_pages import RegistrationPage
 from pages.user import User
 
 
