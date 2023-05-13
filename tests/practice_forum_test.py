@@ -1,7 +1,8 @@
 from datetime import date
 
-from pages.registration_pages import RegistrationPage
-from pages.user import User
+from demoqa_tests.data.user import User
+from demoqa_tests.pages.registration_pages import RegistrationPage
+
 
 
 def test_authorization():

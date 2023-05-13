@@ -32,7 +32,7 @@ class RegistrationPage:
         browser.all('[for = hobbies-checkbox-2]').element_by(have.exact_text(student.hobbies2)).click()
         browser.all('[for = hobbies-checkbox-3]').element_by(have.exact_text(student.hobbies3)).click()
 
-        os.path.abspath(f'../resources/pictures.jpg')
+        os.path.abspath(os.path.join(os.path.dirname(__file__), f'../../tests/resources/pictures.jpg'))
         browser.driver.execute_script(
             'document.querySelector("#fixedban").remove()')
 
