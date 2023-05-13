@@ -6,7 +6,6 @@ from selene import browser, have, command
 @dataclasses.dataclass
 class RegistrationPage:
     def open(self):
-        browser.driver.set_window_size(1920, 1080)
         browser.open('https://demoqa.com/automation-practice-form')
         browser.driver.fullscreen_window()
 
@@ -34,6 +33,8 @@ class RegistrationPage:
         browser.all('[for = hobbies-checkbox-3]').element_by(have.exact_text(student.hobbies3)).click()
 
         os.path.abspath(f'../resources/pictures.jpg')
+        browser.driver.execute_script(
+            'document.querySelector("#fixedban").remove()')
 
         self.element('#currentAddress').perform(command.js.scroll_into_view)
         self.element('#currentAddress').send_keys(student.addrees)
